@@ -20,7 +20,7 @@ namespace WebAPI_CodeFirst_bai1.Controllers
         [HttpGet] 
         public IActionResult GetAll ()
         {
-            var dsLoai = _context.Loai.ToList(  );
+            var dsLoai = _context.Loai.ToList();
             if (dsLoai.Count == 0)
             {
                 return NotFound();

@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI_CodeFirst_bai1.Data;
+using WebAPI_CodeFirst_bai1.Serveices;
 
 namespace WebAPI_CodeFirst_bai1
 {
@@ -35,6 +36,8 @@ namespace WebAPI_CodeFirst_bai1
             {
                 option.UseSqlServer(Configuration.GetConnectionString("HangHoa"));
             });
+
+            services.AddScoped<ILoaiRepository, LoaiResository>();
 
             services.AddSwaggerGen(c =>
             {
