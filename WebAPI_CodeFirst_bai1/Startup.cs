@@ -38,6 +38,7 @@ namespace WebAPI_CodeFirst_bai1
             });
 
             services.AddScoped<ILoaiRepository, LoaiResository>();
+            services.AddScoped<IHangHoaRepository, HangHoaRepository>();
 
             services.AddSwaggerGen(c =>
             {
